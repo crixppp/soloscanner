@@ -1,0 +1,56 @@
+{
+  "credentials": {
+    "coles_api_key": "YOUR_COLES_API_KEY"
+  },
+  "packs": [
+    {
+      "retailer": "Dan Murphy's",
+      "suburb": "Richmond",
+      "pack_size": 10,
+      "source": "dan_murphys",
+      "product_id": "PRODUCT_ID",
+      "url": "https://www.danmurphys.com.au/product/PRODUCT_ID",
+      "store_id": "DMONLINE"
+    },
+    {
+      "retailer": "BWS",
+      "suburb": "Melbourne",
+      "pack_size": 10,
+      "source": "bws",
+      "product_id": "PRODUCT_ID",
+      "url": "https://bws.com.au/product/PRODUCT_SLUG"
+    },
+    {
+      "retailer": "Liquorland",
+      "suburb": "Collingwood",
+      "pack_size": 10,
+      "source": "liquorland",
+      "product_id": "PRODUCT_ID",
+      "url": "https://www.liquorland.com.au/spirits/PRODUCT_SLUG"
+    },
+    {
+      "retailer": "First Choice",
+      "suburb": "Fitzroy",
+      "pack_size": 10,
+      "source": "first_choice",
+      "product_id": "PRODUCT_ID",
+      "url": "https://www.firstchoiceliquor.com.au/spirits/PRODUCT_SLUG"
+    },
+    {
+      "retailer": "Coles",
+      "suburb": "Abbotsford",
+      "pack_size": 10,
+      "source": "coles",
+      "product_id": "PRODUCT_ID",
+      "url": "https://www.coles.com.au/product/PRODUCT_SLUG"
+    },
+    {
+      "retailer": "Woolworths",
+      "suburb": "Preston",
+      "pack_size": 10,
+      "source": "woolworths",
+      "product_id": "PRODUCT_ID",
+      "url": "https://www.woolworths.com.au/shop/productdetails/PRODUCT_ID"
+    }
+  ]
+}
