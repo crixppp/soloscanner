@@ -1,0 +1,40 @@
+name: Update pricing data
+
+on:
+  schedule:
+    - cron: '0 */3 * * *'
+  workflow_dispatch:
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install scraper dependencies
+        run: pip install -r scraper/requirements.txt
+
+      - name: Run scraper
+        env:
+          COLES_API_KEY: ${{ secrets.COLES_API_KEY }}
+        run: python scraper/scraper.py
+
+      - name: Commit updated pricing
+        run: |
+          if git diff --quiet data/prices.json; then
+            echo "No price changes detected"
+          else
+            git config user.name "github-actions"
+            git config user.email "github-actions@github.com"
+            git add data/prices.json
+            git commit -m "chore: update pricing data"
+            git push
+          fi
