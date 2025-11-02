@@ -22,6 +22,7 @@ Solo Scanner is a dark, modern single-page site that highlights the cheapest pri
 
 The site is built with vanilla HTML/CSS/JS. It renders a rotating Hard Rated can that flips between the front selection label and the rear pricing panel when the user changes pack size. Users with reduced-motion preferences see a cross-fade instead of a spin. First-time visitors must complete an age verification modal; consent is remembered for 30 days in `localStorage`.
 
+
 To view the site locally, open `site/index.html` in a browser or serve the directory with any static web server. When hosted on GitHub Pages, make sure the Pages source is set to the `/site` folder (Settings → Pages → Build and deployment).
 
 ## Scraper configuration
