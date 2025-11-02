@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Solo Scanner</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="page" data-js="page">
+      <header class="hero">
+        <div class="hero__title">
+          <h1>Solo Scanner</h1>
+          <p>Track the lowest Hard Rated RTD prices across Melbourne, VIC.</p>
+        </div>
+      </header>
+      <main class="content" aria-live="polite">
+        <section class="can" data-js="can" aria-labelledby="can-heading">
+          <div class="can__inner" data-js="can-inner">
+            <article class="label label--front">
+              <div class="label__top">Hard Rated</div>
+              <div class="label__logo" aria-hidden="true">
+                <span class="label__logo-text">Hard Rated</span>
+              </div>
+              <div class="label__copy">
+                <h2 id="can-heading">Choose your pack</h2>
+                <label class="label__field" for="pack-size">Pack size</label>
+                <div class="label__select-wrap">
+                  <select id="pack-size" data-js="pack-select" aria-label="Select pack size">
+                    <option value="1">1x 375mL can</option>
+                    <option value="4">4x pack</option>
+                    <option value="10">10x pack</option>
+                    <option value="30">30x pack</option>
+                  </select>
+                </div>
+                <p class="label__note">Rotation reveals the best current deal.</p>
+              </div>
+            </article>
+            <article class="label label--back" data-js="price-panel">
+              <div class="price__status" data-js="status">Fetching fresh prices…</div>
+              <dl class="price" hidden data-js="price-details">
+                <div class="price__row">
+                  <dt>Retailer</dt>
+                  <dd><span data-js="retailer">—</span> · <span data-js="suburb">—</span></dd>
+                </div>
+                <div class="price__row">
+                  <dt>Total price</dt>
+                  <dd><span data-js="price-total">—</span></dd>
+                </div>
+                <div class="price__row">
+                  <dt>Per can</dt>
+                  <dd><span data-js="price-unit">—</span></dd>
+                </div>
+                <div class="price__row">
+                  <dt>Last checked</dt>
+                  <dd><time data-js="checked-at">—</time></dd>
+                </div>
+              </dl>
+              <a class="price__link" data-js="product-link" href="#" target="_blank" rel="noopener" hidden>
+                View product
+              </a>
+              <p class="price__updated" data-js="updated-at"></p>
+            </article>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <p>
+          Pricing data updates every three hours from major Victorian retailers.
+          Always drink responsibly.
+        </p>
+      </footer>
+    </div>
+
+    <dialog class="age-modal" data-js="age-modal" aria-labelledby="age-modal-title">
+      <form method="dialog" class="age-modal__content">
+        <h2 id="age-modal-title">Age verification</h2>
+        <p>
+          This site tracks alcohol pricing. By entering you confirm you are at
+          least 18 years old.
+        </p>
+        <div class="age-modal__actions">
+          <button value="cancel" class="button button--secondary">Exit</button>
+          <button value="confirm" class="button button--primary">I am 18+</button>
+        </div>
+      </form>
+    </dialog>
+
+    <script src="script.js" type="module"></script>
+  </body>
+</html>
